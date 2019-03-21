@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VitaDiet", "VitaDiet\VitaDiet.csproj", "{1E3DCCA4-2B1F-4653-8885-8E9267A9450D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E3DCCA4-2B1F-4653-8885-8E9267A9450D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E3DCCA4-2B1F-4653-8885-8E9267A9450D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E3DCCA4-2B1F-4653-8885-8E9267A9450D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E3DCCA4-2B1F-4653-8885-8E9267A9450D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {13F15FE1-6EE5-4D29-B7B3-CB6C8F1296DC}
+	EndGlobalSection
+EndGlobal
