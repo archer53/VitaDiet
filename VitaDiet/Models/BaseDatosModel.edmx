@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="VITADIETModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="DIETA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="NOMBRE" Type="varchar" MaxLength="30" />
+          <Property Name="CEDULA_PACIENTE" Type="int" />
+          <Property Name="COMIDA" Type="varchar" MaxLength="50" />
+          <Property Name="DOMICILIO" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="PACIENTE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="NOMBRE" Type="varchar" MaxLength="30" />
+          <Property Name="APELLIDO" Type="varchar" MaxLength="30" />
+          <Property Name="FECHA_NACIMIENTO" Type="datetime" />
+          <Property Name="CEDULA_PACIENTE" Type="int" />
+          <Property Name="GENERO" Type="char" MaxLength="1" />
+          <Property Name="RH" Type="varchar" MaxLength="3" />
+          <Property Name="DOMICILIO" Type="varchar" MaxLength="30" />
+          <Property Name="OBJETIVOS" Type="varchar" MaxLength="50" />
+          <Property Name="TIEMPO_ESPERADO" Type="varchar" MaxLength="30" />
+          <Property Name="CELULAR" Type="varchar" MaxLength="10" />
+          <Property Name="CORREO" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="PQR">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="NOMBRE_PACIENTE" Type="varchar" MaxLength="50" />
+          <Property Name="CALIFICACION" Type="int" />
+        </EntityType>
+        <EntityContainer Name="VITADIETModelStoreContainer">
+          <EntitySet Name="DIETA" EntityType="Self.DIETA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PACIENTE" EntityType="Self.PACIENTE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PQR" EntityType="Self.PQR" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="VITADIETModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="DIETA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NOMBRE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="CEDULA_PACIENTE" Type="Int32" />
+          <Property Name="COMIDA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DOMICILIO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="PACIENTE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NOMBRE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="APELLIDO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="FECHA_NACIMIENTO" Type="DateTime" Precision="3" />
+          <Property Name="CEDULA_PACIENTE" Type="Int32" />
+          <Property Name="GENERO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="RH" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="DOMICILIO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="OBJETIVOS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TIEMPO_ESPERADO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="CELULAR" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CORREO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="PQR">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NOMBRE_PACIENTE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CALIFICACION" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="VITADIETEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DIETA" EntityType="Self.DIETA" />
+          <EntitySet Name="PACIENTE" EntityType="Self.PACIENTE" />
+          <EntitySet Name="PQR" EntityType="Self.PQR" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="VITADIETModelStoreContainer" CdmEntityContainer="VITADIETEntities">
+          <EntitySetMapping Name="DIETA">
+            <EntityTypeMapping TypeName="VITADIETModel.DIETA">
+              <MappingFragment StoreEntitySet="DIETA">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="CEDULA_PACIENTE" ColumnName="CEDULA_PACIENTE" />
+                <ScalarProperty Name="COMIDA" ColumnName="COMIDA" />
+                <ScalarProperty Name="DOMICILIO" ColumnName="DOMICILIO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PACIENTE">
+            <EntityTypeMapping TypeName="VITADIETModel.PACIENTE">
+              <MappingFragment StoreEntitySet="PACIENTE">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="APELLIDO" ColumnName="APELLIDO" />
+                <ScalarProperty Name="FECHA_NACIMIENTO" ColumnName="FECHA_NACIMIENTO" />
+                <ScalarProperty Name="CEDULA_PACIENTE" ColumnName="CEDULA_PACIENTE" />
+                <ScalarProperty Name="GENERO" ColumnName="GENERO" />
+                <ScalarProperty Name="RH" ColumnName="RH" />
+                <ScalarProperty Name="DOMICILIO" ColumnName="DOMICILIO" />
+                <ScalarProperty Name="OBJETIVOS" ColumnName="OBJETIVOS" />
+                <ScalarProperty Name="TIEMPO_ESPERADO" ColumnName="TIEMPO_ESPERADO" />
+                <ScalarProperty Name="CELULAR" ColumnName="CELULAR" />
+                <ScalarProperty Name="CORREO" ColumnName="CORREO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PQR">
+            <EntityTypeMapping TypeName="VITADIETModel.PQR">
+              <MappingFragment StoreEntitySet="PQR">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NOMBRE_PACIENTE" ColumnName="NOMBRE_PACIENTE" />
+                <ScalarProperty Name="CALIFICACION" ColumnName="CALIFICACION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

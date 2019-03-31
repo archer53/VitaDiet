@@ -1,0 +1,34 @@
+﻿@model VitaDiet.Models.PQR
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PQR</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NOMBRE_PACIENTE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOMBRE_PACIENTE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CALIFICACION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CALIFICACION)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // La información general sobre un ensamblado se controla mediante lo siguiente
 // conjunto de atributos. Cambie los valores de estos atributos para modificar la información
 // asociada con un ensamblado.
-[assembly: AssemblyTitle("VitaDiet")]
+[assembly: AssemblyTitle("VitaDiet.Tests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("VitaDiet")]
+[assembly: AssemblyProduct("VitaDiet.Tests")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // El siguiente GUID sirve como ID de typelib si este proyecto se expone a COM
-[assembly: Guid("cb3c68c4-9213-466d-a8e7-6ee72cdcb207")]
+[assembly: Guid("c5941e52-eecc-4176-8795-5205edef5f1c")]
 
 // La información de versión de un ensamblado consta de los siguientes cuatro valores:
 //

@@ -1,0 +1,106 @@
+﻿@model VitaDiet.Models.PACIENTE
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PACIENTE</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.APELLIDO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.APELLIDO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_NACIMIENTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_NACIMIENTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CEDULA_PACIENTE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CEDULA_PACIENTE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GENERO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GENERO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DOMICILIO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DOMICILIO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OBJETIVOS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OBJETIVOS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TIEMPO_ESPERADO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TIEMPO_ESPERADO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CELULAR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CELULAR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CORREO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CORREO)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
